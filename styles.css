@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+header {
+    position: fixed;
+    top:0;
+}
+
+header a {
+    color: white;
+    text-decoration:none;
+}
+.navbar {
+    position: sticky;
+    display: flex;
+    background-color: #333;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    
+}
+
+.logo {
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin: .5rem
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #585858;
+    border-radius: 100px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.wrapper-new {
+    flex-wrap: wrap;
+    display: flex;
+    
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.wrapper-events {
+    flex-wrap: wrap;
+    display: flex;
+    
+    
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.card {
+    margin: 1rem;
+    display: flex;
+    align-items:end;
+}
+
+.card img {
+    width: 100%;
+}
+
+.event-card {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px grey;
+}
+.book-wrapper h2 {
+    
+    margin-top: 2rem;
+}
+
+/* Här kommer nyhetssidan */
+
+.book-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.book-card {
+    margin: 1rem;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 1px 40px grey;
+}
+
+.book-cover {
+    padding: 1rem;
+}
+
+.article  {
+
+    padding: 1rem;
+}
+
+.article p {
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+.author {
+    font-size: 1rem;
+    font-style:italic;
+}
+
+
+
+
+@media screen and (max-width: 700px) { /* Om skärmen är mindre än 700px */
+
+    .navbar { /* sätter navbar till column */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toggle-button { /*Visar hamburgermenyn */
+        display: flex;
+    }
+    
+    .navbar-links { /*Gömmer länkarna i navbar */
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul { /* Lägger ul i column */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center; /* Centrerar texten i länkarna */
+    }
+
+    .navbar-links li a { 
+        width: 100%;
+        padding: .5rem 1rem;
+        margin: 0;
+        
+    }
+
+    .navbar-links li:hover {
+        background-color: #585858;
+        border-radius: 1px;
+        width: 100%;
+    }
+
+    .navbar-links.active { /* .active kopplas till javascriptet för att visa menyn. */
+        display: flex;
+  }
+
+  .wrapper-events {
+    flex-direction: column;
+  }
+
+  .event-card {
+    margin-bottom: 1rem;
+  }
+
+  /*Här kommer för nyhetssidan */
+
+  .book-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-card {
+    flex-direction: column;
+    width: 100vw;
+  }
+}
