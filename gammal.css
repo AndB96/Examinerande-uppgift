@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+}
+
+header {
+    position: fixed;
+    top:0;
+}
+
+/* header har class .navbar */
+.navbar {
+    position: sticky;
+    display: flex;
+    background-color: #ffc0cb;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+}
+
+/* .logo ligger i header */
+.logo {
+    
+    font-size: 1.5rem;
+    margin: .5rem
+}
+
+/* Sätter storlek på bild i .logo */
+.logo img {
+    width: 50%;
+}
+
+/*.navbar-links ligger i header */
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: #ff0000;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #ffffff;
+    border-radius: 100px;
+}
+
+/* .toggle-button ligger i header */
+.toggle-button {
+    position: absolute;
+    top: 5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #ff0000;
+    border-radius: 10px;
+}
+
+/*.wrapper-new kommer under headern, container för nyheterna på startsidan */
+.wrapper-new {
+    flex-wrap: wrap;
+    display: flex;
+    
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+.wrapper-new h2 {
+    margin-top: 2rem;
+}
+
+/*.card ligger i wrapper new, container för bild på bok */
+.card {
+    margin-bottom: 1rem;
+    display: flex;
+    height: fit-content;
+    /* align-items:end; */
+    box-shadow: 10px 10px 5px grey;
+}
+
+.card img {
+    width: 100%;
+}
+
+/* Kommer efter .wrapper-new, container för evenemang på startsida. */
+.wrapper-events {
+    flex-wrap: wrap;
+    display: flex;
+    
+    width: 100vw;
+    justify-content: space-evenly;
+}
+
+/*Ligger i wrapper-events, innehåller info om evenemang på startsidan */
+.event-card {
+    margin: 1rem;
+    width: 20vw;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding: 1rem;
+    box-shadow: 10px 10px 10px grey;
+}
+
+.event-card h2 {
+    text-align: start;
+}
+
+/*Brytlinje mellan Nyheter och Evenemang på startsidan, ligger i main */
+.line {
+    margin-top: 2rem;
+    border-top: 3px dotted #ffc0cb;
+}
+
+/* H2 rubriker på starsidan ovanför Nyheter och Evenmang */
+.news-index, .events-index {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+/* Här kommer nyhetssidan */
+
+/*Container för böckerna på nyhetssidan */
+.book-wrapper {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ligger i .book-wrapper, container för bok. */
+.book-card {
+    margin: 1rem;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 1px 40px grey;
+}
+
+/* Ligger i book-card, innehåller bild på bok */
+.book-cover {
+    padding: 1rem;
+}
+
+.book-cover img {
+    box-shadow: 5px 5px 5px grey;
+}
+
+/* Ligger i book-card och innehåller beskrivning av bok */
+.article  {
+    padding: 1rem;
+}
+
+.article p {
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+/* Span element i .article */
+.author {
+    font-size: 1rem;
+    font-style:italic;
+}
+
+/* Evenemang sidan */
+
+.events, .news {
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 700px) { /* Om skärmen är mindre än 700px */
+
+    .navbar { /* sätter navbar till column */
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .toggle-button { /*Visar hamburgermenyn */
+        display: flex;
+    }
+    
+    .navbar-links { /*Gömmer länkarna i navbar */
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul { /* Lägger ul i column */
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        text-align: center; /* Centrerar texten i länkarna */
+    }
+
+    .navbar-links li a { 
+        width: 100%;
+        padding: .5rem 1rem;
+        margin: 0;
+        
+    }
+
+    .navbar-links li:hover {
+        background-color: #ffffff;
+        border-radius: 1px;
+        width: 100%;
+    }
+
+    .navbar-links.active { /* .active kopplas till javascriptet för att visa menyn. */
+        display: flex;
+  }
+
+  .wrapper-events {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .event-card {
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  /*Här kommer för nyhetssidan */
+
+  .book-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .book-card {
+    text-align: left;
+    flex-direction: column;
+    width: 100vw;
+  }
+}
