@@ -9,7 +9,18 @@ body {
   color: #2b2b2b;
 }
 
-.navbar {
+header {
+  position: fixed;
+  top: 0;
+}
+header .logo {
+  font-size: 1.5rem;
+  margin: 0.5rem;
+}
+header .logo img {
+  width: 50%;
+}
+header.navbar {
   background-color: #ffc0cb;
   color: #ff0000;
   position: sticky;
@@ -17,35 +28,26 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.navbar .logo {
-  font-size: 1.5rem;
-  margin: 0.5rem;
-}
-.navbar .logo img {
-  width: 50%;
-}
-.navbar .navbar-links ul {
+header.navbar ul {
   margin: 0;
   padding: 0;
   display: flex;
   font-size: 1.5rem;
 }
-.navbar .navbar-links ul li {
+header.navbar ul li {
   list-style: none;
-  transition: background-color 0.1s ease;
-  border-radius: 100px;
 }
-.navbar .navbar-links ul li a {
+header.navbar ul li a {
   padding: 1rem;
   display: block;
   text-decoration: none;
   color: #ff0000;
 }
-.navbar .navbar-links ul li:hover {
+header.navbar ul li:hover {
   background-color: #fff;
+  border-radius: 100px;
 }
-.navbar .toggle-button {
-  z-index: 1000;
+header .toggle-button {
   position: absolute;
   top: 5rem;
   right: 1rem;
@@ -55,17 +57,17 @@ body {
   width: 30px;
   height: 21px;
 }
-.navbar .toggle-button .bar {
+header .toggle-button .bar {
   height: 3px;
   width: 100%;
   background-color: #ff0000;
   border-radius: 10px;
-  transition: transform 0.2s linear;
 }
 
 .wrapper-new {
   flex-wrap: wrap;
   display: flex;
+  width: 100vw;
   justify-content: space-evenly;
 }
 .wrapper-new h2 {
@@ -89,6 +91,7 @@ body {
 .wrapper-events {
   flex-wrap: wrap;
   display: flex;
+  width: 100vw;
   justify-content: space-evenly;
 }
 .wrapper-events .event-card {
@@ -162,17 +165,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
-  .navbar .toggle-button {
+  .toggle-button {
     display: flex;
-  }
-  .navbar .toggle-button.active .bar-1 {
-    transform: rotate(45deg) translate(6.5px, 6.5px);
-  }
-  .navbar .toggle-button.active .bar-2 {
-    opacity: 0;
-  }
-  .navbar .toggle-button.active .bar-3 {
-    transform: rotate(-45deg) translate(6.5px, -6.5px);
   }
   .navbar-links {
     display: none;
@@ -215,6 +209,7 @@ body {
   .book-card {
     text-align: left;
     flex-direction: column;
+    width: 100vw;
   }
 }
 /* Sami fixar?? */
