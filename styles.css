@@ -1,219 +1,243 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: arial;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    position: fixed;
-    top:0;
+body {
+  font-family: Roboto;
+  color: #2b2b2b;
 }
 
-header a {
-    color: white;
-    text-decoration:none;
+footer {
+  width: 100%;
+  background-color: #ffc0cb;
+  color: #ff0000;
+  text-align: center;
 }
+footer.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
 .navbar {
-    position: sticky;
-    display: flex;
-    background-color: #333;
-    justify-content: space-between;
-    align-items: center;
-    color:white;
-    
+  background-color: #ffc0cb;
+  color: #ff0000;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-
-.logo {
-    padding: 1rem;
-    font-size: 1.5rem;
-    margin: .5rem
+.navbar .logo {
+  font-size: 1.5rem;
+  margin: 0.5rem;
 }
-
-.navbar-links ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    font-size: 1.5rem;
+.navbar .logo img {
+  width: 50%;
 }
-
-.navbar-links li {
-    list-style: none;
+.navbar .navbar-links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: 1.5rem;
 }
-
-.navbar-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
-    display: block;
+.navbar .navbar-links ul li {
+  list-style: none;
+  transition: background-color 0.1s ease;
+  border-radius: 100px;
+  margin-left: 5px;
 }
-
-.navbar-links li:hover {
-    background-color: #585858;
-    border-radius: 100px;
+.navbar .navbar-links ul li a {
+  padding: 1rem;
+  display: block;
+  text-decoration: none;
+  color: #ff0000;
 }
-
-.toggle-button {
-    position: absolute;
-    top: 2rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
+.navbar .navbar-links ul li:hover {
+  background-color: #fff;
 }
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+.navbar .navbar-links ul li.active {
+  background-color: #fff;
+}
+.navbar .toggle-button {
+  z-index: 1000;
+  position: absolute;
+  top: 5rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.navbar .toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ff0000;
+  border-radius: 10px;
+  transition: transform 0.2s linear;
 }
 
 .wrapper-new {
-    flex-wrap: wrap;
-    display: flex;
-    
-    width: 100vw;
-    justify-content: space-evenly;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrapper-new h2 {
+  margin-top: 2rem;
+}
+.wrapper-new .card {
+  margin-bottom: 1rem;
+  display: flex;
+  height: fit-content;
+  box-shadow: 10px 10px 5px #808080;
+  transition: transform 0.2s ease;
+}
+.wrapper-new .card:hover {
+  transform: scale(1.05);
+}
+.wrapper-new .card img {
+  width: 100%;
+  height: 300px;
 }
 
 .wrapper-events {
-    flex-wrap: wrap;
-    display: flex;
-    
-    
-    width: 100vw;
-    justify-content: space-evenly;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrapper-events .event-card {
+  margin: 1rem;
+  width: 20vw;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 10px 10px 10px #808080;
+}
+.wrapper-events .event-card h2 {
+  text-align: start;
 }
 
-.card {
-    margin: 1rem;
-    display: flex;
-    align-items:end;
+.line {
+  margin-top: 2rem;
+  border-top: 3px dotted #ffc0cb;
 }
 
-.card img {
-    width: 100%;
+.news-index,
+.events-index {
+  padding: 2rem;
+  text-align: center;
 }
-
-.event-card {
-    width: 20vw;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    border-radius: 20px;
-    padding: 1rem;
-    box-shadow: 10px 10px 10px grey;
-}
-.book-wrapper h2 {
-    
-    margin-top: 2rem;
-}
-
-/* Här kommer nyhetssidan */
 
 .book-wrapper {
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.book-card {
-    margin: 1rem;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 10px 1px 40px grey;
+.book-wrapper .book-card {
+  margin: 1rem;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  box-shadow: 10px 1px 40px #808080;
 }
-
-.book-cover {
-    padding: 1rem;
+.book-wrapper .book-card .book-cover {
+  padding: 1rem;
 }
-
-.article  {
-
-    padding: 1rem;
+.book-wrapper .book-card .book-cover img {
+  box-shadow: 5px 5px 5px #808080;
 }
-
-.article p {
-    margin-bottom: .5rem;
-    line-height: 1.5;
-}
-
-.author {
-    font-size: 1rem;
-    font-style:italic;
-}
-
-
-
-
-@media screen and (max-width: 700px) { /* Om skärmen är mindre än 700px */
-
-    .navbar { /* sätter navbar till column */
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .toggle-button { /*Visar hamburgermenyn */
-        display: flex;
-    }
-    
-    .navbar-links { /*Gömmer länkarna i navbar */
-        display: none;
-        width: 100%;
-    }
-
-    .navbar-links ul { /* Lägger ul i column */
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links li {
-        text-align: center; /* Centrerar texten i länkarna */
-    }
-
-    .navbar-links li a { 
-        width: 100%;
-        padding: .5rem 1rem;
-        margin: 0;
-        
-    }
-
-    .navbar-links li:hover {
-        background-color: #585858;
-        border-radius: 1px;
-        width: 100%;
-    }
-
-    .navbar-links.active { /* .active kopplas till javascriptet för att visa menyn. */
-        display: flex;
+@media screen and (max-width: 400px) {
+  .book-wrapper .book-card .book-cover img {
+    height: 250px;
   }
+}
+.book-wrapper .book-card .article {
+  padding: 1rem;
+}
+.book-wrapper .book-card .article p {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+.book-wrapper .book-card .article .author {
+  font-size: 1rem;
+  font-style: italic;
+}
 
+.events,
+.news {
+  padding: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar .toggle-button {
+    display: flex;
+  }
+  .navbar .toggle-button.active .bar-1 {
+    transform: rotate(45deg) translate(6.5px, 6.5px);
+  }
+  .navbar .toggle-button.active .bar-2 {
+    opacity: 0;
+  }
+  .navbar .toggle-button.active .bar-3 {
+    transform: rotate(-45deg) translate(6.5px, -6.5px);
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+  }
+  .navbar-links li:hover {
+    background-color: #ffffff;
+    border-radius: 1px;
+    width: 100%;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
   .wrapper-events {
+    display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
   }
-
   .event-card {
+    margin: 0;
     margin-bottom: 1rem;
+    width: 100%;
   }
-
-  /*Här kommer för nyhetssidan */
-
   .book-wrapper {
     flex-direction: column;
     text-align: center;
   }
-
-  .book-card {
+  .book-wrapper .book-card {
+    text-align: left;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
   }
 }
+/* Sami fixar?? */
+
+/*# sourceMappingURL=styles.css.map */
