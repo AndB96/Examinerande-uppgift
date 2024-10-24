@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    
-
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <link rel="icon" type="image/x-icon" href="favico.png" />
     <script src="script.js" defer></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pärmar & Poesi - Nyheter</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <header class="navbar">
-        <section class="logo">
-            <a href="index.html"><img src="Parmar__Poesi.png" alt="Pärmar & Poesi"></img></a>
-        </section>
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-        <nav class="navbar-links">
-            <ul>
-                <li><a href="news.html">Nyheter</a></li>
-                <li><a href="events.html">Evenemang</a></li>
-                <li><a href="#">Kontakt</a></li>
-            </ul>
-        </nav>
+      <section class="logo">
+        <a href="index.html"
+          ><img src="Parmar__Poesi.png" alt="Pärmar & Poesi"
+        /></a>
+      </section>
+      <a href="#" class="toggle-button">
+        <span class="bar bar-1"></span>
+        <span class="bar bar-2"></span>
+        <span class="bar bar-3"></span>
+      </a>
+      <nav class="navbar-links">
+        <ul>
+          <li><a href="news.html">Nyheter</a></li>
+          <li><a href="events.html">Evenemang</a></li>
+          <li class="active"><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
-    
+
     <section class="contact-wrapper">
-        <section class="contact-card">
-        <p>Adress:</p>
-        <p><a href="mailto:test@example.test">Testexample.test</a></p>
-        <p>Telefon:</p>
-        </section>
+      <section
+        class="border border-black rounded-xl p-6 mt-24 mx-auto flex flex-col bg-[#fff3fb] max-w-[350px]"
+      >
+        <h1 class="text-3xl font-bold">Kontakta oss här.</h1>
+        <p class="text-xl">Adress: Bokgatan 1</p>
+        <p class="text-xl">Mail: pärmar.poesi@hotmail.com</p>
+        <p class="text-xl">Telefon: 079-1234567</p>
+      </section>
     </section>
-    
-</body>
+    <footer class="bottom">
+      <p>&copy; 2024 Pärmar & Poesi.</p>
+    </footer>
+  </body>
 </html>

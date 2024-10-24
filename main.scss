@@ -12,6 +12,17 @@ body {
   color: $dark-grey;
 }
 
+footer {
+  width: 100%;
+  background-color: $app-color-secondary;
+  color: $app-color-highlight;
+  text-align: center;
+  &.bottom {
+    position: absolute;
+    bottom: 0;
+  }
+}
+
 .navbar {
   background-color: $app-color-secondary;
   color: $app-color-highlight;
@@ -36,6 +47,7 @@ body {
         list-style: none;
         transition: background-color 0.1s ease;
         border-radius: 100px;
+        margin-left: 5px;
         a {
           padding: 1rem;
           display: block;
@@ -43,6 +55,9 @@ body {
           color: $app-color-highlight;
         }
         &:hover {
+          background-color: $white;
+        }
+        &.active {
           background-color: $white;
         }
       }
@@ -142,6 +157,9 @@ body {
       padding: 1rem;
       img {
         box-shadow: 5px 5px 5px $grey;
+        @media screen and (max-width: 400px) {
+          height: 250px;
+        }
       }
     }
     .article {
@@ -157,14 +175,13 @@ body {
     }
   }
 }
-
 .events,
 .news {
   padding: 2rem;
   text-align: center;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -229,12 +246,11 @@ body {
   .book-wrapper {
     flex-direction: column;
     text-align: center;
-  }
-
-  .book-card {
-    text-align: left;
-    flex-direction: column;
-    // width: 100vw;
+    .book-card {
+      text-align: left;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 }
 /* Sami fixar?? */
